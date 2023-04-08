@@ -12,6 +12,7 @@
 		314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE729E1A0600066CC7A /* Table.cpp */; };
 		314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DEA29E1A0600066CC7A /* Heap.cpp */; };
 		314B4DF129E1A0760066CC7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DF029E1A0760066CC7A /* main.cpp */; };
+		314B4DF429E1A4110066CC7A /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DF229E1A4110066CC7A /* test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		314B4DEA29E1A0600066CC7A /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
 		314B4DEB29E1A0600066CC7A /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
 		314B4DF029E1A0760066CC7A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../Zadanie1/main.cpp; sourceTree = "<group>"; };
+		314B4DF229E1A4110066CC7A /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		314B4DF329E1A4110066CC7A /* test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				314B4DE129E1A0600066CC7A /* ListaDwukierunkowa */,
 				314B4DE629E1A0600066CC7A /* Table */,
 				314B4DE929E1A0600066CC7A /* Kopiec */,
+				314B4DF229E1A4110066CC7A /* test.cpp */,
+				314B4DF329E1A4110066CC7A /* test.hpp */,
 			);
 			path = Zadanie1;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				314B4DEC29E1A0600066CC7A /* Node.cpp in Sources */,
 				314B4DF129E1A0760066CC7A /* main.cpp in Sources */,
 				314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */,
+				314B4DF429E1A4110066CC7A /* test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
