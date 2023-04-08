@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		314B4DEC29E1A0600066CC7A /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE229E1A0600066CC7A /* Node.cpp */; };
+		314B4DED29E1A0600066CC7A /* DoublyLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */; };
+		314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE729E1A0600066CC7A /* Table.cpp */; };
+		314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DEA29E1A0600066CC7A /* Heap.cpp */; };
+		314B4DF129E1A0760066CC7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DF029E1A0760066CC7A /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3108197A29E19FF900FC0787 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3108197C29E19FF900FC0787 /* sdizo-projekt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdizo-projekt"; sourceTree = BUILT_PRODUCTS_DIR; };
+		314B4DE229E1A0600066CC7A /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoublyLinkedList.cpp; sourceTree = "<group>"; };
+		314B4DE429E1A0600066CC7A /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		314B4DE529E1A0600066CC7A /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DoublyLinkedList.hpp; sourceTree = "<group>"; };
+		314B4DE729E1A0600066CC7A /* Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Table.cpp; sourceTree = "<group>"; };
+		314B4DE829E1A0600066CC7A /* Table.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Table.hpp; sourceTree = "<group>"; };
+		314B4DEA29E1A0600066CC7A /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
+		314B4DEB29E1A0600066CC7A /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
+		314B4DF029E1A0760066CC7A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../Zadanie1/main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3108197929E19FF900FC0787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3108197329E19FF900FC0787 = {
+			isa = PBXGroup;
+			children = (
+				3108197E29E19FF900FC0787 /* sdizo-projekt */,
+				3108197D29E19FF900FC0787 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3108197D29E19FF900FC0787 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3108197C29E19FF900FC0787 /* sdizo-projekt */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3108197E29E19FF900FC0787 /* sdizo-projekt */ = {
+			isa = PBXGroup;
+			children = (
+				314B4DF029E1A0760066CC7A /* main.cpp */,
+				314B4DE029E1A0600066CC7A /* Zadanie1 */,
+			);
+			path = "sdizo-projekt";
+			sourceTree = "<group>";
+		};
+		314B4DE029E1A0600066CC7A /* Zadanie1 */ = {
+			isa = PBXGroup;
+			children = (
+				314B4DE129E1A0600066CC7A /* ListaDwukierunkowa */,
+				314B4DE629E1A0600066CC7A /* Table */,
+				314B4DE929E1A0600066CC7A /* Kopiec */,
+			);
+			path = Zadanie1;
+			sourceTree = "<group>";
+		};
+		314B4DE129E1A0600066CC7A /* ListaDwukierunkowa */ = {
+			isa = PBXGroup;
+			children = (
+				314B4DE229E1A0600066CC7A /* Node.cpp */,
+				314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */,
+				314B4DE429E1A0600066CC7A /* Node.hpp */,
+				314B4DE529E1A0600066CC7A /* DoublyLinkedList.hpp */,
+			);
+			path = ListaDwukierunkowa;
+			sourceTree = "<group>";
+		};
+		314B4DE629E1A0600066CC7A /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				314B4DE729E1A0600066CC7A /* Table.cpp */,
+				314B4DE829E1A0600066CC7A /* Table.hpp */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		314B4DE929E1A0600066CC7A /* Kopiec */ = {
+			isa = PBXGroup;
+			children = (
+				314B4DEA29E1A0600066CC7A /* Heap.cpp */,
+				314B4DEB29E1A0600066CC7A /* Heap.hpp */,
+			);
+			path = Kopiec;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3108197B29E19FF900FC0787 /* sdizo-projekt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3108198329E19FF900FC0787 /* Build configuration list for PBXNativeTarget "sdizo-projekt" */;
+			buildPhases = (
+				3108197829E19FF900FC0787 /* Sources */,
+				3108197929E19FF900FC0787 /* Frameworks */,
+				3108197A29E19FF900FC0787 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sdizo-projekt";
+			productName = "sdizo-projekt";
+			productReference = 3108197C29E19FF900FC0787 /* sdizo-projekt */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3108197429E19FF900FC0787 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3108197B29E19FF900FC0787 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 3108197729E19FF900FC0787 /* Build configuration list for PBXProject "sdizo-projekt" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3108197329E19FF900FC0787;
+			productRefGroup = 3108197D29E19FF900FC0787 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3108197B29E19FF900FC0787 /* sdizo-projekt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3108197829E19FF900FC0787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314B4DED29E1A0600066CC7A /* DoublyLinkedList.cpp in Sources */,
+				314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */,
+				314B4DEC29E1A0600066CC7A /* Node.cpp in Sources */,
+				314B4DF129E1A0760066CC7A /* main.cpp in Sources */,
+				314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3108198129E19FF900FC0787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3108198229E19FF900FC0787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3108198429E19FF900FC0787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3108198529E19FF900FC0787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3108197729E19FF900FC0787 /* Build configuration list for PBXProject "sdizo-projekt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3108198129E19FF900FC0787 /* Debug */,
+				3108198229E19FF900FC0787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3108198329E19FF900FC0787 /* Build configuration list for PBXNativeTarget "sdizo-projekt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3108198429E19FF900FC0787 /* Debug */,
+				3108198529E19FF900FC0787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3108197429E19FF900FC0787 /* Project object */;
+}
