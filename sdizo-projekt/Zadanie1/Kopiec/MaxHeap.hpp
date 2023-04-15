@@ -15,8 +15,9 @@ private:
     int heapLength; //liczba elementów w tablicy
     int* data; //tablica
 public:
-    MaxHeap(int heapSize);
     MaxHeap();
+    
+    void setLength(int n);
 
     ~MaxHeap();
     

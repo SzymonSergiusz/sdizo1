@@ -8,15 +8,18 @@
 #include <fstream>
 #include "MaxHeap.hpp"
 //kopiec binarny max
-MaxHeap::MaxHeap(int heapSize) : heapSize(heapSize), heapLength(heapSize+5), data(new int[heapLength]){
+MaxHeap::MaxHeap() : heapSize(0), heapLength(0), data(new int[0]){
     
-
 }
-MaxHeap::MaxHeap() : heapSize(10), heapLength(heapSize+5), data(new int[heapLength]){
-    
-
-}
+//MaxHeap::MaxHeap() : heapSize(0), heapLength(5), data(new int[heapLength]){
+//
+//}
 MaxHeap::~MaxHeap() {}
+
+void MaxHeap::setLength(int n) {
+    heapLength = n;
+    data = new int[heapLength];
+}
 
 int MaxHeap::parent(int i) {
     return (i-1)/2;
@@ -95,7 +98,6 @@ void MaxHeap::displayHeap() {
 void MaxHeap::loadFromFile(std::string fileName) {
     std::ifstream inputFile(fileName);
     delete[] data;
-
     int newSize;
     inputFile >> newSize;
     
