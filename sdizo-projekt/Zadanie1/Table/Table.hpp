@@ -1,6 +1,6 @@
 #ifndef Table_hpp
 #define Table_hpp
-
+#include <string>
 #include <stdio.h>
 class Table {
 private:
@@ -15,7 +15,7 @@ public:
     void deleteByIndex(int index);
     void display();
     void generateTable(int size);
-    int loadFromFile(std::string fileName); //todo
+    int loadFromFile(std::string fileName);
     bool isContainingValue(int val);
     int getSize();
 };

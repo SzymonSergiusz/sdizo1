@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		314B4DEC29E1A0600066CC7A /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE229E1A0600066CC7A /* Node.cpp */; };
+		314B4DEC29E1A0600066CC7A /* DLLNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE229E1A0600066CC7A /* DLLNode.cpp */; };
 		314B4DED29E1A0600066CC7A /* DoublyLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */; };
 		314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE729E1A0600066CC7A /* Table.cpp */; };
-		314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DEA29E1A0600066CC7A /* Heap.cpp */; };
 		314B4DF129E1A0760066CC7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DF029E1A0760066CC7A /* main.cpp */; };
-		314B4DF429E1A4110066CC7A /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DF229E1A4110066CC7A /* test.cpp */; };
+		31DBBBA829EAE58E008B9050 /* test_sdizo_projekt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBB9C29EAE2C5008B9050 /* test_sdizo_projekt.mm */; };
+		31DBBBAA29EAE63A008B9050 /* TestTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBBA929EAE63A008B9050 /* TestTable.m */; };
+		31DBBBAC29EAF706008B9050 /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE729E1A0600066CC7A /* Table.cpp */; };
+		31DBBBAF29EAF900008B9050 /* HeapNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBBAD29EAF900008B9050 /* HeapNode.cpp */; };
+		31DBBBB029EB0254008B9050 /* MaxHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DEA29E1A0600066CC7A /* MaxHeap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,22 +31,35 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3108197C29E19FF900FC0787 /* sdizo-projekt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdizo-projekt"; sourceTree = BUILT_PRODUCTS_DIR; };
-		314B4DE229E1A0600066CC7A /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		314B4DE229E1A0600066CC7A /* DLLNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DLLNode.cpp; sourceTree = "<group>"; };
 		314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DoublyLinkedList.cpp; sourceTree = "<group>"; };
-		314B4DE429E1A0600066CC7A /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		314B4DE429E1A0600066CC7A /* DLLNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DLLNode.hpp; sourceTree = "<group>"; };
 		314B4DE529E1A0600066CC7A /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		314B4DE729E1A0600066CC7A /* Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Table.cpp; sourceTree = "<group>"; };
 		314B4DE829E1A0600066CC7A /* Table.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Table.hpp; sourceTree = "<group>"; };
-		314B4DEA29E1A0600066CC7A /* Heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heap.cpp; sourceTree = "<group>"; };
-		314B4DEB29E1A0600066CC7A /* Heap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heap.hpp; sourceTree = "<group>"; };
+		314B4DEA29E1A0600066CC7A /* MaxHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxHeap.cpp; sourceTree = "<group>"; };
+		314B4DEB29E1A0600066CC7A /* MaxHeap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = "<group>"; };
 		314B4DF029E1A0760066CC7A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../Zadanie1/main.cpp; sourceTree = "<group>"; };
-		314B4DF229E1A4110066CC7A /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
-		314B4DF329E1A4110066CC7A /* test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test.hpp; sourceTree = "<group>"; };
+		31DBBB9A29EAE2C5008B9050 /* test-sdizo-projekt.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "test-sdizo-projekt.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31DBBB9C29EAE2C5008B9050 /* test_sdizo_projekt.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = test_sdizo_projekt.mm; sourceTree = "<group>"; };
+		31DBBBA329EAE3CF008B9050 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		31DBBBA629EAE3CF008B9050 /* sdizo-projekt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdizo-projekt"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31DBBBA929EAE63A008B9050 /* TestTable.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = TestTable.m; sourceTree = "<group>"; };
+		31DBBBAD29EAF900008B9050 /* HeapNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeapNode.cpp; sourceTree = "<group>"; };
+		31DBBBAE29EAF900008B9050 /* HeapNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeapNode.hpp; sourceTree = "<group>"; };
+		31DBBBB229EB0C3D008B9050 /* heap2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heap2.txt; sourceTree = "<group>"; };
+		31DBBBB329EB0C3D008B9050 /* heap1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heap1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3108197929E19FF900FC0787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31DBBB9729EAE2C5008B9050 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,17 +72,13 @@
 		3108197329E19FF900FC0787 = {
 			isa = PBXGroup;
 			children = (
+				31DBBBB129EB0C3D008B9050 /* pliki */,
 				3108197E29E19FF900FC0787 /* sdizo-projekt */,
-				3108197D29E19FF900FC0787 /* Products */,
+				31DBBB9A29EAE2C5008B9050 /* test-sdizo-projekt.xctest */,
+				31DBBB9B29EAE2C5008B9050 /* test-sdizo-projekt */,
+				31DBBBA229EAE3CF008B9050 /* Frameworks */,
+				31DBBBA629EAE3CF008B9050 /* sdizo-projekt */,
 			);
-			sourceTree = "<group>";
-		};
-		3108197D29E19FF900FC0787 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3108197C29E19FF900FC0787 /* sdizo-projekt */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3108197E29E19FF900FC0787 /* sdizo-projekt */ = {
@@ -84,8 +96,6 @@
 				314B4DE129E1A0600066CC7A /* ListaDwukierunkowa */,
 				314B4DE629E1A0600066CC7A /* Table */,
 				314B4DE929E1A0600066CC7A /* Kopiec */,
-				314B4DF229E1A4110066CC7A /* test.cpp */,
-				314B4DF329E1A4110066CC7A /* test.hpp */,
 			);
 			path = Zadanie1;
 			sourceTree = "<group>";
@@ -93,9 +103,9 @@
 		314B4DE129E1A0600066CC7A /* ListaDwukierunkowa */ = {
 			isa = PBXGroup;
 			children = (
-				314B4DE229E1A0600066CC7A /* Node.cpp */,
+				314B4DE229E1A0600066CC7A /* DLLNode.cpp */,
 				314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */,
-				314B4DE429E1A0600066CC7A /* Node.hpp */,
+				314B4DE429E1A0600066CC7A /* DLLNode.hpp */,
 				314B4DE529E1A0600066CC7A /* DoublyLinkedList.hpp */,
 			);
 			path = ListaDwukierunkowa;
@@ -113,10 +123,38 @@
 		314B4DE929E1A0600066CC7A /* Kopiec */ = {
 			isa = PBXGroup;
 			children = (
-				314B4DEA29E1A0600066CC7A /* Heap.cpp */,
-				314B4DEB29E1A0600066CC7A /* Heap.hpp */,
+				314B4DEA29E1A0600066CC7A /* MaxHeap.cpp */,
+				314B4DEB29E1A0600066CC7A /* MaxHeap.hpp */,
+				31DBBBAD29EAF900008B9050 /* HeapNode.cpp */,
+				31DBBBAE29EAF900008B9050 /* HeapNode.hpp */,
 			);
 			path = Kopiec;
+			sourceTree = "<group>";
+		};
+		31DBBB9B29EAE2C5008B9050 /* test-sdizo-projekt */ = {
+			isa = PBXGroup;
+			children = (
+				31DBBB9C29EAE2C5008B9050 /* test_sdizo_projekt.mm */,
+				31DBBBA929EAE63A008B9050 /* TestTable.m */,
+			);
+			path = "test-sdizo-projekt";
+			sourceTree = "<group>";
+		};
+		31DBBBA229EAE3CF008B9050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31DBBBA329EAE3CF008B9050 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		31DBBBB129EB0C3D008B9050 /* pliki */ = {
+			isa = PBXGroup;
+			children = (
+				31DBBBB229EB0C3D008B9050 /* heap2.txt */,
+				31DBBBB329EB0C3D008B9050 /* heap1.txt */,
+			);
+			path = pliki;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +174,25 @@
 			);
 			name = "sdizo-projekt";
 			productName = "sdizo-projekt";
-			productReference = 3108197C29E19FF900FC0787 /* sdizo-projekt */;
+			productReference = 31DBBBA629EAE3CF008B9050 /* sdizo-projekt */;
 			productType = "com.apple.product-type.tool";
+		};
+		31DBBB9929EAE2C5008B9050 /* test-sdizo-projekt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31DBBB9E29EAE2C5008B9050 /* Build configuration list for PBXNativeTarget "test-sdizo-projekt" */;
+			buildPhases = (
+				31DBBB9629EAE2C5008B9050 /* Sources */,
+				31DBBB9729EAE2C5008B9050 /* Frameworks */,
+				31DBBB9829EAE2C5008B9050 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "test-sdizo-projekt";
+			productName = "test-sdizo-projekt";
+			productReference = 31DBBB9A29EAE2C5008B9050 /* test-sdizo-projekt.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -146,9 +201,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					3108197B29E19FF900FC0787 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					31DBBB9929EAE2C5008B9050 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -162,14 +221,25 @@
 				Base,
 			);
 			mainGroup = 3108197329E19FF900FC0787;
-			productRefGroup = 3108197D29E19FF900FC0787 /* Products */;
+			productRefGroup = 3108197329E19FF900FC0787;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3108197B29E19FF900FC0787 /* sdizo-projekt */,
+				31DBBB9929EAE2C5008B9050 /* test-sdizo-projekt */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31DBBB9829EAE2C5008B9050 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3108197829E19FF900FC0787 /* Sources */ = {
@@ -178,10 +248,20 @@
 			files = (
 				314B4DED29E1A0600066CC7A /* DoublyLinkedList.cpp in Sources */,
 				314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */,
-				314B4DEC29E1A0600066CC7A /* Node.cpp in Sources */,
+				314B4DEC29E1A0600066CC7A /* DLLNode.cpp in Sources */,
 				314B4DF129E1A0760066CC7A /* main.cpp in Sources */,
-				314B4DEF29E1A0600066CC7A /* Heap.cpp in Sources */,
-				314B4DF429E1A4110066CC7A /* test.cpp in Sources */,
+				31DBBBB029EB0254008B9050 /* MaxHeap.cpp in Sources */,
+				31DBBBAF29EAF900008B9050 /* HeapNode.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31DBBB9629EAE2C5008B9050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31DBBBAC29EAF706008B9050 /* Table.cpp in Sources */,
+				31DBBBAA29EAE63A008B9050 /* TestTable.m in Sources */,
+				31DBBBA829EAE58E008B9050 /* test_sdizo_projekt.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -309,7 +390,46 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		31DBBB9F29EAE2C5008B9050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M24BUWBX5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "szymonkluska.test-sdizo-projekt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31DBBBA029EAE2C5008B9050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M24BUWBX5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "szymonkluska.test-sdizo-projekt";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -330,6 +450,15 @@
 			buildConfigurations = (
 				3108198429E19FF900FC0787 /* Debug */,
 				3108198529E19FF900FC0787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31DBBB9E29EAE2C5008B9050 /* Build configuration list for PBXNativeTarget "test-sdizo-projekt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31DBBB9F29EAE2C5008B9050 /* Debug */,
+				31DBBBA029EAE2C5008B9050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

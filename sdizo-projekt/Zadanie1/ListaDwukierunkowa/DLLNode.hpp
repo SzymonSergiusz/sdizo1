@@ -3,33 +3,33 @@
 
 #include <stdio.h>
 
-class Node {
+class DLLNode {
 private:
     int key;
-    Node* next;
-    Node* previous;
+    DLLNode* next;
+    DLLNode* previous;
     
 public:
-    Node(int key);
-    ~Node();
+    DLLNode(int key);
+    ~DLLNode();
     
     int getKey() {
         return key;
     };
     
-    Node* getNext() {
+    DLLNode* getNext() {
         return next;
     }
     
-    Node* getPrevious() {
+    DLLNode* getPrevious() {
         return previous;
     }
     
-    void setPrevious(Node* newNode) {
+    void setPrevious(DLLNode* newNode) {
         previous = newNode;
     }
     
-    void setNext(Node* newNode) {
+    void setNext(DLLNode* newNode) {
         next = newNode;
     }
 };

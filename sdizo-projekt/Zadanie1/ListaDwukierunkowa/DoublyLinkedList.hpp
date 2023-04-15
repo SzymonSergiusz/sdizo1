@@ -2,13 +2,13 @@
 #define DoublyLinkedList_hpp
 
 #include <stdio.h>
-#include "Node.hpp"
+#include "DLLNode.hpp"
 
 
 class DoublyLinkedList {
 private:
-    Node* head;
-    Node* tail;
+    DLLNode* head;
+    DLLNode* tail;
     int size;
 
 public:
