@@ -1,5 +1,4 @@
-#import <Foundation/Foundation.h>
-#import <XCTest/XCTest.h>
+#include <XCTest/XCTest.h>
 #include "MaxHeap.hpp"
 
 @interface MaxHeapTests : XCTestCase
@@ -8,40 +7,50 @@
 
 @implementation MaxHeapTests
 
-- (void)testMaxHeap {
-    MaxHeap heap;
 
-    // Test add function
+- (void)testAdd {
+    MaxHeap heap;
+    heap.setLength(9);
     heap.add(3);
     heap.add(5);
     heap.add(2);
     heap.add(9);
-//    XCTAssertEqual(heap.getMax(), 9);
+    XCTAssertEqual(heap.getHeapSize(), 4);
+    XCTAssertTrue(heap.search(3));
+}
 
-    // Test deleteByIndex function
-//    heap.deleteByIndex();
-//    XCTAssertEqual(heap.getMax(), 5);
+- (void)testDeleteByIndex {
+    MaxHeap heap;
+    heap.setLength(9);
+    heap.add(3);
+    heap.add(5);
+    heap.add(2);
+    heap.add(9);
+    heap.deleteByIndex(0);
+    XCTAssertFalse(heap.search(9));
+}
 
-    // Test getMin function
-//    XCTAssertEqual(heap.getMin(), 2);
+- (void)testSearch {
+    MaxHeap heap;
+    heap.setLength(9);
+    heap.add(3);
+    heap.add(5);
+    heap.add(2);
+    heap.add(9);
+    XCTAssertTrue(heap.search(5));
+    XCTAssertFalse(heap.search(10));
+}
 
-    // Test displayTable function
-    heap.displayTable();
+- (void)testGenerateHeap {
+    MaxHeap heap1;
+    heap1.generateHeap(10);
+    XCTAssertEqual(heap1.getHeapSize(), 10);
+}
 
-    // Test displayHeap function
-    heap.displayHeap();
-
-    // Test displayTree function
-    heap.displayTree();
-
-    // Test generateHeap function
-    heap.generateHeap();
-//    XCTAssertEqual(heap.getMax(), 9);
-
-    // Test loadFromFile function
-    heap.loadFromFile("data.txt");
-//    XCTAssertEqual(heap.getMax(), 20);
+- (void)testLoadFromFile {
+    MaxHeap heap2;
+    heap2.loadFromFile("/Users/sergiusz/Documents/studia/CzwartySemestr/SDIZO/sdizo-projekt/pliki/heap1.txt");
+    XCTAssertTrue(heap2.search(1));
 }
 
 @end
-
