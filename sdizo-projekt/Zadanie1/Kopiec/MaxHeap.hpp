@@ -23,19 +23,18 @@ public:
     
     void add(int item);
     void deleteByIndex(int i);
-    void buildMaxHeap();
     void maxHeapify(int i);
     int parent(int i);
     int left(int i);
     int right(int i);
+    bool search(int el);
     
-    int getMin();
-    int getMax();
+
     void swap(int index1, int index2);
     void displayTable();
     void displayHeap();
     void displayTree();
-    void generateHeap();
+    void generateHeap(int size);
     void loadFromFile(std::string fileName);
 };
 #endif /* Heap_hpp */

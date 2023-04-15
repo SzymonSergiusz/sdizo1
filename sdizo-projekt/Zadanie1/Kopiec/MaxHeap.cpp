@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include "MaxHeap.hpp"
+#include <random>
 
 MaxHeap::MaxHeap(): heapSize(0), heapLength(0), data(new int[0]){
     
@@ -28,8 +29,42 @@ void MaxHeap::add(int item) {
     }
     heapSize++;
 }
-void MaxHeap::deleteByIndex(int i) {
+void MaxHeap::maxHeapify(int i) {
     
+    int l = left(i);
+    int r = right(i);
+    int largest = i;
+
+    if (l < heapSize && data[l] > data[i]) {
+        largest = l;
+    }
+    if (r < heapSize && data[r] > data[largest]) {
+        largest = r;
+    }
+
+    if (largest != i) {
+        swap(i, largest);
+        maxHeapify(largest);
+    }
+}
+void MaxHeap::deleteByIndex(int i) {
+    if (i < 0 || i >= heapSize) {
+         std::cout << "Nieprawidłowy indeks\n";
+         return;
+     }
+
+     data[i] = data[heapSize-1];
+     heapSize--;
+    maxHeapify(i);
+}
+
+bool MaxHeap::search(int el) {
+    for (int i = 0; i < heapSize; i++) {
+        if (data[i] == el) {
+            return true;
+        }
+    }
+    return false;
 }
 void MaxHeap::setLength(int n) {
     heapLength = n;
@@ -90,9 +125,22 @@ void MaxHeap::loadFromFile(std::string fileName) {
         inputFile.close();
     } else {
         std::cout << "Nie odnaleziono pliku " <<fileName <<std::endl;
-        
     }
 }
-//int MaxHeap::getMin() {
-//
-//}
+
+void MaxHeap::generateHeap(int size) {
+    if (heapSize != 0) {
+        heapSize = 0;
+        delete[] data;
+        heapLength = size + 5;
+        data = new int[heapLength];
+    }
+    
+    std::random_device randDev;
+    std::mt19937 rng(randDev());
+    std::uniform_int_distribution<> distr(0, 100);
+    
+    for (int i = 0; i < size; i++) {
+        add(distr(rng));
+    }
+}
