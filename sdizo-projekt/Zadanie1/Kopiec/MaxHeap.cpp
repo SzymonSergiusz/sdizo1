@@ -11,9 +11,7 @@
 MaxHeap::MaxHeap() : heapSize(0), heapLength(0), data(new int[0]){
     
 }
-//MaxHeap::MaxHeap() : heapSize(0), heapLength(5), data(new int[heapLength]){
-//
-//}
+
 MaxHeap::~MaxHeap() {}
 
 void MaxHeap::setLength(int n) {
@@ -41,30 +39,27 @@ void MaxHeap::add(int item) {
 
     int i = heapSize;
     heapSize++;
-    if (i < heapSize) {
-        maxHeapify(i);
-    }
+    
+    maxHeapify(i);
+    
     
 }
 
 void MaxHeap::swap(int index1, int index2) {
-    if (index1 < heapSize && index2 < heapSize) {
-        
         int temp = data[index1];
         data[index1] = data[index2];
         data[index2] = temp;
-    }
 }
 
 void MaxHeap::maxHeapify(int i) {
     
     int l = left(i);
     int r = right(i);
-    int largest;
+    int largest = i;
 
     if (l < heapSize && data[l] > data[i]) {
         largest = l;
-    } else largest = i;
+    }
     if (r < heapSize && data[r] > data[largest]) {
         largest = r;
     }
