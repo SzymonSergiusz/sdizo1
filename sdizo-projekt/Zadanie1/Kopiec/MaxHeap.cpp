@@ -134,8 +134,9 @@ void MaxHeap::generateHeap(int size) {
         delete[] data;
         heapLength = size + 5;
         data = new int[heapLength];
+    } else {
+        heapLength = size + 5;
     }
-    
     std::random_device randDev;
     std::mt19937 rng(randDev());
     std::uniform_int_distribution<> distr(0, 100);

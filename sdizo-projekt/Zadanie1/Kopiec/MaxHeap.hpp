@@ -28,7 +28,9 @@ public:
     int left(int i);
     int right(int i);
     bool search(int el);
-    
+    int getHeapSize() {
+        return heapSize;
+    }
 
     void swap(int index1, int index2);
     void displayTable();
