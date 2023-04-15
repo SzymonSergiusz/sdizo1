@@ -7,7 +7,7 @@
 
 #ifndef MaxHeap_hpp
 #define MaxHeap_hpp
-
+#include <string>
 #include <stdio.h>
 class MaxHeap {
 private:
@@ -22,8 +22,8 @@ public:
     ~MaxHeap();
     
     void add(int item);
-    void deleteByIndex();
-    
+    void deleteByIndex(int i);
+    void buildMaxHeap();
     void maxHeapify(int i);
     int parent(int i);
     int left(int i);
