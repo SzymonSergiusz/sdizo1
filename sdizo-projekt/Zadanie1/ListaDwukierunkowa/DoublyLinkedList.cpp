@@ -1,14 +1,14 @@
 #include <iostream>
 #include "DoublyLinkedList.hpp"
-#include "DLLNode.hpp"
+#include "Node.hpp"
 #include <fstream>
 #include <random>
-
+#include <string>
 DoublyLinkedList::DoublyLinkedList() : size(0), head(nullptr), tail(nullptr) {}
 DoublyLinkedList::~DoublyLinkedList() {clear();}
 void DoublyLinkedList::clear() {
-    DLLNode* current = head;
-    DLLNode* next = nullptr;
+    Node* current = head;
+    Node* next = nullptr;
     
     while (current != nullptr) {
         next = current->getNext();
@@ -21,7 +21,7 @@ void DoublyLinkedList::clear() {
 }
 
 void DoublyLinkedList::add(int key, int index) {
-    DLLNode* newNode = new DLLNode(key);
+    Node* newNode = new Node(key);
 
     //na początek
     if (index == 0) {
@@ -49,7 +49,7 @@ void DoublyLinkedList::add(int key, int index) {
         return;
     }
     
-    DLLNode* currentNode = head;
+    Node* currentNode = head;
     //na dowolne
     for (int i = 0; i < size; i++) {
         if (i == index) {
@@ -66,7 +66,7 @@ void DoublyLinkedList::add(int key, int index) {
 }
 
 void DoublyLinkedList::deleteByValue(int val) {
-    DLLNode* currentNode = head;
+    Node* currentNode = head;
     
     while (currentNode != nullptr) {
         if (currentNode->getKey() == val) {
@@ -98,7 +98,7 @@ void DoublyLinkedList::deleteByValue(int val) {
 
 
 bool DoublyLinkedList::isContainingValue(int val) {
-    DLLNode* node = head;
+    Node* node = head;
     while (node != nullptr) {
         if (node->getKey() == val)
             return true;
@@ -109,7 +109,7 @@ bool DoublyLinkedList::isContainingValue(int val) {
 }
 
 void DoublyLinkedList::display() {
-    DLLNode* current = head;
+    Node* current = head;
     
     while (current != nullptr) {
         std::cout << current->getKey() << " ";

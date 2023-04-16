@@ -31,7 +31,9 @@ public:
     int getHeapSize() {
         return heapSize;
     }
-
+    
+    void printHeap(int heap[], int size);
+    
     void swap(int index1, int index2);
     void displayTable();
     void displayHeap();

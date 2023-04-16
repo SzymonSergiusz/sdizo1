@@ -1,14 +1,8 @@
-//
-//  MaxHeap.cpp
-//  sdizo-projekt
-//
-//  Created by Szymon Kluska on 15/04/2023.
-//
-
 #include <iostream>
 #include <fstream>
 #include "MaxHeap.hpp"
 #include <random>
+using namespace std;
 
 MaxHeap::MaxHeap(): heapSize(0), heapLength(0), data(new int[0]){
     
@@ -143,5 +137,39 @@ void MaxHeap::generateHeap(int size) {
     
     for (int i = 0; i < size; i++) {
         add(distr(rng));
+    }
+}
+
+void MaxHeap::displayTree() {
+    printHeap(data, heapSize);
+}
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+void MaxHeap::printHeap(int heap[], int size)
+{
+    int height = log2(size) + 1;
+    int index = 0;
+
+    for (int i = 1; i <= height; i++) {
+        int numNodes = pow(2, i - 1);
+        int spaces = pow(2, height - i) - 1;
+
+        cout << setw(spaces) << "";
+
+        for (int j = 0; j < numNodes && index < size; j++) {
+            cout << setw(2) << heap[index];
+            cout << setw(spaces) << "";
+
+            index++;
+
+            if (j != numNodes - 1) {
+                cout << setw(spaces) << "";
+            }
+        }
+
+        cout << endl;
     }
 }

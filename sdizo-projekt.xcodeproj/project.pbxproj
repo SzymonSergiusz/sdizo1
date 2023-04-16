@@ -22,6 +22,11 @@
 		31DBBBC129EB46B0008B9050 /* BST.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBBBE29EB46B0008B9050 /* BST.cpp */; };
 		31DBBBC329EB4845008B9050 /* DoublyLinkedListTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBBC229EB4845008B9050 /* DoublyLinkedListTests.mm */; };
 		31DBBBC429EB485C008B9050 /* DoublyLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE329E1A0600066CC7A /* DoublyLinkedList.cpp */; };
+		31DBBBC629EB4AED008B9050 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE229E1A0600066CC7A /* Node.cpp */; };
+		31DBBBC729EB4AEE008B9050 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314B4DE229E1A0600066CC7A /* Node.cpp */; };
+		31DBBBC929EB4B72008B9050 /* tab1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBC829EB4B72008B9050 /* tab1.txt */; };
+		31DBBBCC29EB7A6A008B9050 /* bst1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBCA29EB7A6A008B9050 /* bst1.txt */; };
+		31DBBBCD29EB7A6A008B9050 /* bst2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBCB29EB7A6A008B9050 /* bst2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +64,9 @@
 		31DBBBBE29EB46B0008B9050 /* BST.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BST.cpp; sourceTree = "<group>"; };
 		31DBBBBF29EB46B0008B9050 /* BST.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BST.hpp; sourceTree = "<group>"; };
 		31DBBBC229EB4845008B9050 /* DoublyLinkedListTests.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = DoublyLinkedListTests.mm; sourceTree = "<group>"; };
+		31DBBBC829EB4B72008B9050 /* tab1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tab1.txt; sourceTree = "<group>"; };
+		31DBBBCA29EB7A6A008B9050 /* bst1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bst1.txt; sourceTree = "<group>"; };
+		31DBBBCB29EB7A6A008B9050 /* bst2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bst2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,9 @@
 		31DBBBB129EB0C3D008B9050 /* pliki */ = {
 			isa = PBXGroup;
 			children = (
+				31DBBBCA29EB7A6A008B9050 /* bst1.txt */,
+				31DBBBCB29EB7A6A008B9050 /* bst2.txt */,
+				31DBBBC829EB4B72008B9050 /* tab1.txt */,
 				31DBBBB229EB0C3D008B9050 /* heap2.txt */,
 				31DBBBB329EB0C3D008B9050 /* heap1.txt */,
 			);
@@ -258,6 +269,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DBBBC929EB4B72008B9050 /* tab1.txt in Resources */,
+				31DBBBCD29EB7A6A008B9050 /* bst2.txt in Resources */,
+				31DBBBCC29EB7A6A008B9050 /* bst1.txt in Resources */,
 				31DBBBBC29EB434B008B9050 /* heap1.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DBBBC029EB46B0008B9050 /* BST.cpp in Sources */,
+				31DBBBC629EB4AED008B9050 /* Node.cpp in Sources */,
 				314B4DED29E1A0600066CC7A /* DoublyLinkedList.cpp in Sources */,
 				314B4DEE29E1A0600066CC7A /* Table.cpp in Sources */,
 				31DBBBBA29EB2EDC008B9050 /* MaxHeap.cpp in Sources */,
@@ -282,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DBBBC729EB4AEE008B9050 /* Node.cpp in Sources */,
 				31DBBBAC29EAF706008B9050 /* Table.cpp in Sources */,
 				31DBBBBB29EB32E6008B9050 /* MaxHeap.cpp in Sources */,
 				31DBBBAA29EAE63A008B9050 /* TestTable.mm in Sources */,

@@ -48,8 +48,8 @@
 
 - (void)testLoadFromFile {
     DoublyLinkedList list;
-    list.loadFromFile("test.txt");
-    XCTAssertEqual(list.getSize(), 4);
+    list.loadFromFile("/Users/sergiusz/Documents/studia/CzwartySemestr/SDIZO/sdizo-projekt/pliki/tab1.txt");
+    XCTAssertEqual(list.getSize(), 5);
 }
 
 - (void)testGenerateList {

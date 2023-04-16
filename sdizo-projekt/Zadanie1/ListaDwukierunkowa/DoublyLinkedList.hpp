@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include "Node.hpp"
-
+#include <string>
 
 class DoublyLinkedList {
 private:
