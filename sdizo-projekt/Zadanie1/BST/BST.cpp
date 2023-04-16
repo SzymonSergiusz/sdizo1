@@ -117,44 +117,86 @@ TreeNode* BST::insertNode(TreeNode *parent, TreeNode *node, int value) {
 
 bool BST::search(TreeNode* node, int s) {
     
-    if (node == nullptr || s == root->value) {
-        return node;
-    }
-    if (s < node->value) {
+    if (node == nullptr) {
+        return false;
+    } else if (s == node->value) {
+        return true;
+    } else if (s < node->value) {
         return search(node->left, s);
-    } else return search(node->right, s);
-    
-    return false;
-}
-TreeNode* BST::min(TreeNode *node) {
-    TreeNode* min = node;
-    while (min && min->left == nullptr) {
-        min = min->left;
-    }
-    return min;
+    } else
+        return search(node->right, s);
 }
 
-TreeNode* BST::deleteValue(TreeNode* node, int value) {
-    if (node == nullptr)
-        return node;
-    
-    if (value <node->value) {
-        node->left = deleteValue(node->left, value);
-    } else if (value > node->value) {
-        node->right = deleteValue(node->right, value);
-    } else {
-        if (node->left == nullptr) {
-            TreeNode* temp = node->right;
-            delete node;
-            return temp;
-        }
-
-        TreeNode* temp = min(root->right);
-         node->value = temp->value;
-        node->right = deleteValue(node->right, temp->value);
+TreeNode* BST::minimumTreeNode(TreeNode *node) {
+    while (node->left != nullptr) {
+        node = node->left;
     }
     return node;
 }
+
+
+void BST::deleteValue(TreeNode* node, int value) {
+    TreeNode* parent = nullptr;
+    TreeNode* current = node;
+    
+    //znalezienie węzła do usunięcia
+    while (current != nullptr && current->value != value) {
+        parent = current;
+        if (value > current->value) {
+            current = current->right;
+        } else current = current->left;
+    }
+    //nie ma wartoście w drzewie
+    if (current == nullptr) return;
+    
+    //węzęł nie ma synów
+    if (current->left ==  nullptr && current->right == nullptr) {
+        //nie ma synów i ojca -> korzeń
+        if (parent == nullptr)
+            root = nullptr;
+        else if (parent->left == current)
+            parent->left = nullptr;
+        else parent->right = nullptr;
+        delete current;
+        return;
+    }
+    //jeden syn
+    else if (current->left == nullptr || current->right == nullptr) {
+        TreeNode* child = nullptr;
+        if (current->left != nullptr) {
+            child = current->left;
+        } else child = current->right;
+        
+        //jeśli węzeł nie ma ojca => korzeń do usunięcia
+        if (parent == nullptr) {
+            root = child;
+        } else if (parent->left == current) {
+            parent->left = child;
+        } else parent->right = child;
+        return;
+    }
+    //dwóch synów
+    else {
+        
+        TreeNode* successor = minimumTreeNode(current->right);
+        if (successor != nullptr) {
+            TreeNode* successorParent = successor->parent;
+            //zamiana wartości
+            current->value = successor->value;
+            //usunięcie następnika
+            if (successorParent != nullptr) {
+                if (successorParent->left == successor) {
+                    successorParent->left = successor->right;
+                } else {
+                    successorParent->right = successor->right;
+                }
+                delete successor;
+            }
+        }
+    }
+    
+}
+
 
 
 void BST::displayTree() {

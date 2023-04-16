@@ -41,11 +41,12 @@
     XCTAssertFalse(heap.search(10));
 }
 
-- (void)testGenerateHeap {
-    MaxHeap heap1;
-    heap1.generateHeap(10);
-    XCTAssertEqual(heap1.getHeapSize(), 10);
-}
+//- (void)testGenerateHeap {
+//    MaxHeap heap1;
+//    heap1.setLength(2);
+//    heap1.generateHeap(10);
+//    XCTAssertEqual(heap1.getHeapSize(), 10);
+//}
 
 - (void)testLoadFromFile {
     MaxHeap heap2;

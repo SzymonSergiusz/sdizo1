@@ -37,13 +37,13 @@ public:
     void DSW(TreeNode* node);
     
     void deleteRoot();
-    TreeNode* deleteValue(TreeNode* node, int value);
+    void deleteValue(TreeNode* node, int value);
     
     
     bool search(TreeNode* node, int s);
     
     TreeNode* insertNode(TreeNode *parent, TreeNode* node, int value);
-    TreeNode* min(TreeNode* node);
+    TreeNode* minimumTreeNode(TreeNode* node);
     
     void generateBST(int size);
     void displayTree();
