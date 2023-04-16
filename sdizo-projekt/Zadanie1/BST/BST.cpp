@@ -18,6 +18,32 @@ void BST::deleteRoot() {
     root = nullptr;
 }
 
+void BST::rotateLeft(TreeNode* A) {
+    if (A == nullptr)
+        return;
+    TreeNode* B = A->right;
+    if (B == nullptr)
+        return;
+    TreeNode* parent = A->parent;
+    A->right = B->left;
+    if (A->right != nullptr) {
+        A->right->parent = A;
+    }
+    B->left = A;
+    B->parent = parent;
+    A->parent = B;
+    
+    if (parent == nullptr) {
+        root = B;
+    } else {
+        if (parent->left == A) {
+            parent->left = B;
+        } else {
+            parent->right = B;
+        }
+    }
+}
+
 void BST::rotateRight(TreeNode* A) {
     TreeNode* B = A->left;
     if (B == nullptr)
@@ -42,61 +68,38 @@ void BST::rotateRight(TreeNode* A) {
     }
 }
 
-void BST::rotateLeft(TreeNode* A) {
-    TreeNode* B = A->right;
-    if (B == nullptr)
-        return;
-    TreeNode* parent = A->parent;
-    A->right = B->left;
-    if (A->right != nullptr) {
-        A->right->parent = A;
-    }
-    B->left = A;
-    B->parent = parent;
-    A->parent = B;
-    
-    if (parent == nullptr) {
-        root = B;
-    } else {
-        if (parent->left == A) {
-            parent->left = B;
-        } else {
-            parent->right = B;
-        }
-    }
-}
-
-void BST::DSW(TreeNode* node) {
+void BST::DSW() {
+    // Perform the first step of the algorithm to create a skewed tree
     int n = 0;
     TreeNode* parent = root;
-    
     while (parent != nullptr) {
         if (parent->left != nullptr) {
-            rotateRight(node);
+            rotateRight(parent);
             parent = parent->parent;
         }
         n++;
         parent = parent->right;
     }
-    
-    int s = n+1 - log2(n+1);
+
+    // Perform the second step of the algorithm to balance the tree
+    int m = pow(2, floor(log2(n + 1))) - 1;
     parent = root;
-    //todo ?
-    for (int i = 1; i < s; i++) {
-        rotateLeft(node);
+    for (int i = 0; i < m; i++) {
+        rotateLeft(parent);
         parent = parent->parent->right;
     }
-    
-    n = n-s;
-    
-    while (n > 1) {
-        n = n/2;
+    while (m > 1) {
+        m = m / 2;
         parent = root;
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < m; i++) {
+            rotateLeft(parent);
             parent = parent->parent->right;
         }
     }
 }
+
+
+
 
 void BST::insert(int value)  {
     root = insertNode(nullptr, root, value);

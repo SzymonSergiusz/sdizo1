@@ -34,7 +34,7 @@ public:
     
     void rotateRight(TreeNode* A);
     void rotateLeft(TreeNode* A);
-    void DSW(TreeNode* node);
+    void DSW();
     
     void deleteRoot();
     void deleteValue(TreeNode* node, int value);
