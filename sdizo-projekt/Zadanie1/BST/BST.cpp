@@ -13,6 +13,11 @@
 
 BST::BST() :root(nullptr){};
 BST::~BST() {};
+
+void BST::deleteRoot() {
+    root = nullptr;
+}
+
 void BST::rotateRight(TreeNode* A) {
     TreeNode* B = A->left;
     if (B == nullptr)

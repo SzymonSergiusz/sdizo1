@@ -27,6 +27,7 @@
 		31DBBBC929EB4B72008B9050 /* tab1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBC829EB4B72008B9050 /* tab1.txt */; };
 		31DBBBCC29EB7A6A008B9050 /* bst1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBCA29EB7A6A008B9050 /* bst1.txt */; };
 		31DBBBCD29EB7A6A008B9050 /* bst2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31DBBBCB29EB7A6A008B9050 /* bst2.txt */; };
+		31DBBBCF29EC722F008B9050 /* TestBST.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31DBBBCE29EC722F008B9050 /* TestBST.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		31DBBBC829EB4B72008B9050 /* tab1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tab1.txt; sourceTree = "<group>"; };
 		31DBBBCA29EB7A6A008B9050 /* bst1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bst1.txt; sourceTree = "<group>"; };
 		31DBBBCB29EB7A6A008B9050 /* bst2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bst2.txt; sourceTree = "<group>"; };
+		31DBBBCE29EC722F008B9050 /* TestBST.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestBST.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				31DBBBA929EAE63A008B9050 /* TestTable.mm */,
 				31DBBBB429EB2779008B9050 /* TestHeap.mm */,
 				31DBBBC229EB4845008B9050 /* DoublyLinkedListTests.mm */,
+				31DBBBCE29EC722F008B9050 /* TestBST.mm */,
 			);
 			path = "test-sdizo-projekt";
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				31DBBBC129EB46B0008B9050 /* BST.cpp in Sources */,
 				31DBBBA829EAE58E008B9050 /* test_sdizo_projekt.mm in Sources */,
 				31DBBBB529EB2779008B9050 /* TestHeap.mm in Sources */,
+				31DBBBCF29EC722F008B9050 /* TestBST.mm in Sources */,
 				31DBBBC329EB4845008B9050 /* DoublyLinkedListTests.mm in Sources */,
 				31DBBBC429EB485C008B9050 /* DoublyLinkedList.cpp in Sources */,
 			);
