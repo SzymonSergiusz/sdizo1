@@ -163,3 +163,40 @@ void DoublyLinkedList::generateList(int size) {
         add(distr(rng), i);
     }
 }
+void DoublyLinkedList::deleteByIndex(int index) {
+
+    if (size == 0) {
+        return;
+    }else if (index == 0) {
+        Node* nodeToDelete = head;
+        head = head->getNext();
+        if (head != nullptr) {
+            head->setPrevious(nullptr);
+        } else {
+            tail = nullptr;
+        }
+        delete nodeToDelete;
+        size--;
+        return;
+    } else if (index >= size - 1) {
+        Node* nodeToDelete = tail;
+        tail = tail->getPrevious();
+        if (tail != nullptr) {
+            tail->setNext(nullptr);
+        } else {
+            head = nullptr;
+        }
+        delete nodeToDelete;
+        size--;
+        return;
+    } else {
+        Node* currentNode = head;
+        for (int i = 0; i < index; i++) {
+            currentNode = currentNode->getNext();
+        }
+        currentNode->getPrevious()->setNext(currentNode->getNext());
+        currentNode->getNext()->setPrevious(currentNode->getPrevious());
+        delete currentNode;
+        size--;
+    }
+}

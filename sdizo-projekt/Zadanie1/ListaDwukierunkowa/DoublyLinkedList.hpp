@@ -26,7 +26,7 @@ public:
     void loadFromFile(std::string fileName);
     
     void generateList(int size);
-    
+    void deleteByIndex(int index);
     int getSize() {
         return size;
     }

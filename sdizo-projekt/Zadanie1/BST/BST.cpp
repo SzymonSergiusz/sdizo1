@@ -63,23 +63,23 @@ void BST::compress(TreeNode* root, int m) {
  
 TreeNode* BST::balanceBST(TreeNode* root) {
     //pusty węzeł
-    TreeNode* emptyNode = new TreeNode(0);
- 
+    std::unique_ptr<TreeNode> emptyNode(new TreeNode(0));
     emptyNode->right = root;
  
-    int nodesCount = treeToSpine(emptyNode);
+    int nodesCount = treeToSpine(emptyNode.get());
  
     int logarytm = log2(nodesCount + 1);
  
     int m = pow(2, logarytm) - 1;
     //kompresja liści
-    compress(emptyNode, nodesCount - m);
+    compress(emptyNode.get(), nodesCount - m);
 
     m = m /2;
     while (m > 0) {
-        compress(emptyNode, m);
+        compress(emptyNode.get(), m);
         m = m / 2;
     }
+    
     return emptyNode->right;
 }
 
@@ -227,7 +227,7 @@ void BST::print2D(TreeNode* root)
 }
 void BST::loadFromFile(std::string fileName) {
     std::ifstream inputFile(fileName);
-    delete root;
+    root = nullptr;
     int newSize;
     inputFile >> newSize;
     
@@ -246,7 +246,7 @@ void BST::loadFromFile(std::string fileName) {
 }
 
 void BST::generateBST(int size) {
-    delete root;
+    root = nullptr;
     
     std::random_device randDev;
     std::mt19937 rng(randDev());

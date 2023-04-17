@@ -38,7 +38,7 @@ public:
     
     TreeNode* balanceBST(TreeNode* root);
     int treeToSpine(TreeNode* root);
-    void compress(TreeNode* grand, int m);
+    void compress(TreeNode* root, int m);
     void deleteRoot();
     void deleteValue(TreeNode* node, int value);
     
