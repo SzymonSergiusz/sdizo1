@@ -18,87 +18,75 @@ void BST::deleteRoot() {
     root = nullptr;
 }
 
-void BST::rotateLeft(TreeNode* A) {
-    if (A == nullptr)
-        return;
-    TreeNode* B = A->right;
-    if (B == nullptr)
-        return;
-    TreeNode* parent = A->parent;
-    A->right = B->left;
-    if (A->right != nullptr) {
-        A->right->parent = A;
-    }
-    B->left = A;
-    B->parent = parent;
-    A->parent = B;
-    
-    if (parent == nullptr) {
-        root = B;
-    } else {
-        if (parent->left == A) {
-            parent->left = B;
-        } else {
-            parent->right = B;
-        }
-    }
+void BST::rotateRight(TreeNode *&root, TreeNode *&A) {
+    TreeNode* B = A->left;
+    A->left = B->right;
+    B->right = A;
+    root->right = B;
+    A = B;
 }
 
-void BST::rotateRight(TreeNode* A) {
-    TreeNode* B = A->left;
-    if (B == nullptr)
-        return;
-    TreeNode* parent = A->parent;
-    A->left = B->right;
-    if (A->left != nullptr) {
-        A->left->parent = A;
-    }
-    B->right = A;
-    B->parent = parent;
-    A->parent = B;
-    
-    if (parent == nullptr) {
-        root = B;
-    } else {
-        if (parent->left == A) {
-            parent->left = B;
+ 
+int BST::treeToSpine(TreeNode* root)
+{
+    int nodeCount = 0;
+    TreeNode* nodeA = root->right;
+ 
+    while (nodeA != nullptr) {
+        
+        //rotacja w prawo jeśli istnieje lewy węzeł
+        if (nodeA->left != nullptr) {
+            rotateRight(root, nodeA);
         } else {
-            parent->right = B;
+            //dalsze przejście w dół drzewa
+            nodeCount++;
+            root = nodeA;
+            nodeA = nodeA->right;
         }
     }
+    return nodeCount;
 }
+
+void BST::compress(TreeNode* root, int m) {
+    TreeNode* scanner = root;
+
+    //przekształcenie w drzewo
+    for (int i = 0; i < m; i++) {
+        TreeNode* child = scanner->right;
+        scanner->right = child->right;
+        scanner = scanner->right;
+        child->right = scanner->left;
+        scanner->left = child;
+        
+    }
+}
+ 
+TreeNode* BST::balanceBST(TreeNode* root) {
+    //pusty węzeł
+    TreeNode* emptyNode = new TreeNode(0);
+ 
+    emptyNode->right = root;
+ 
+    int nodesCount = treeToSpine(emptyNode);
+ 
+    int logarytm = log2(nodesCount + 1);
+ 
+    int m = pow(2, logarytm) - 1;
+    //kompresja liści
+    compress(emptyNode, nodesCount - m);
+
+    m = m /2;
+    while (m > 0) {
+        compress(emptyNode, m);
+        m = m / 2;
+    }
+    return emptyNode->right;
+}
+
 
 void BST::DSW() {
-    // Perform the first step of the algorithm to create a skewed tree
-    int n = 0;
-    TreeNode* parent = root;
-    while (parent != nullptr) {
-        if (parent->left != nullptr) {
-            rotateRight(parent);
-            parent = parent->parent;
-        }
-        n++;
-        parent = parent->right;
-    }
-
-    // Perform the second step of the algorithm to balance the tree
-    int m = pow(2, floor(log2(n + 1))) - 1;
-    parent = root;
-    for (int i = 0; i < m; i++) {
-        rotateLeft(parent);
-        parent = parent->parent->right;
-    }
-    while (m > 1) {
-        m = m / 2;
-        parent = root;
-        for (int i = 0; i < m; i++) {
-            rotateLeft(parent);
-            parent = parent->parent->right;
-        }
-    }
+    root = balanceBST(root);
 }
-
-
 
 
 void BST::insert(int value)  {
@@ -209,7 +197,7 @@ void BST::displayTree() {
 //print
 void BST::print2DUtil(TreeNode* root, int space)
 {
-    int COUNT = 10;
+    int COUNT = 8;
     // Base case
     if (root == nullptr)
         return;

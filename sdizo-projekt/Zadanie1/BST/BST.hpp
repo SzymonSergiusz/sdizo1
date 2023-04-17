@@ -20,10 +20,10 @@ struct TreeNode {
 };
 
 class BST {
+    
 private:
     TreeNode* root;
 public:
-
     BST();
     ~BST();
     
@@ -32,13 +32,15 @@ public:
         return root;
     }
     
-    void rotateRight(TreeNode* A);
-    void rotateLeft(TreeNode* A);
+    void rotateRight(TreeNode* &root, TreeNode* &A);
+    void rotateLeft(TreeNode* &root, TreeNode* &A);
     void DSW();
     
+    TreeNode* balanceBST(TreeNode* root);
+    int treeToSpine(TreeNode* root);
+    void compress(TreeNode* grand, int m);
     void deleteRoot();
     void deleteValue(TreeNode* node, int value);
-    
     
     bool search(TreeNode* node, int s);
     
