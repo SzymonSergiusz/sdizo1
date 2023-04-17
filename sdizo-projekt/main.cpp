@@ -308,6 +308,8 @@ void menu_bst()
                 bst.loadFromFile("/Users/sergiusz/Documents/studia/CzwartySemestr/SDIZO/sdizo-projekt/pliki/bst1.txt");
                 bst.deleteValue(bst.getRoot(), 12);
                 bst.deleteValue(bst.getRoot(), 18);
+                bst.displayTree();
+                cout << "__________________________________________\n";
                 bst.DSW();
                 bst.displayTree();
                 break;
